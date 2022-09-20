@@ -21,12 +21,12 @@ const Admin = function(raffle) {
 };
 
 Admin.create = async (newRaffle) => {
-  await query('INSERT INTO raffle2 SET ?', [newRaffle]);
+  await query('INSERT INTO raffle3 SET ?', [newRaffle]);
   return newRaffle;
 };
 
 Admin.delete = async (id) => {
-  sql.query('DELETE FROM raffle2 WHERE idraffle = ?', [id],
+  sql.query('DELETE FROM raffle3 WHERE idraffle = ?', [id],
   (err, res) => {
     if (err) {
       return "err";
@@ -40,7 +40,7 @@ Admin.delete = async (id) => {
 
 Admin.update = async (id, newRaffle) => {
   sql.query(
-    "UPDATE raffle2 SET title = ?, collection = ?, twitter = ?, image = ?, end_raffle = ?, solscan = ?, price = ?, maxTickets= ?, categorie= ?, numberWinners = ?, description = ?, eth = ? WHERE idraffle = ?",
+    "UPDATE raffle3 SET title = ?, collection = ?, twitter = ?, image = ?, end_raffle = ?, solscan = ?, price = ?, maxTickets= ?, categorie= ?, numberWinners = ?, description = ?, eth = ? WHERE idraffle = ?",
     [newRaffle.title, newRaffle.collection, newRaffle.twitter ,newRaffle.image ,newRaffle.end_raffle ,newRaffle.solscan, newRaffle.price, newRaffle.maxTickets, newRaffle.categorie,newRaffle.numberWinners, newRaffle.description, newRaffle.eth, id],
     (err, res) => {
       if (err) {

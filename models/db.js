@@ -7,7 +7,7 @@ const connection = mysql.createPool({
   user: dbConfig.USER,
   password: dbConfig.PASSWORD,
   database: dbConfig.DB,
-  connectionLimit: 54,
+  connectionLimit: 18,
   waitForConnections:true,
   queueLimit: 10000,
   connectTimeout: 15000,

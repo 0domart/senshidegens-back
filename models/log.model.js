@@ -14,11 +14,11 @@ const Log = function(log) {
 
 Log.create = async (buyer, tickets, idraffle, txn) => {
   let time = new Date();
-  await query('INSERT INTO Log SET buyer=?, txn=?, date=?, tickets=?, idraffle=?', [buyer, txn, time, tickets, idraffle]);
+  await query('INSERT INTO log2 SET buyer=?, txn=?, date=?, tickets=?, idraffle=?', [buyer, txn, time, tickets, idraffle]);
 };
 
 Log.getLogByIdRaffle = async(idRaffle) => {
-  return await query('SELECT * FROM log where idraffle = ? ORDER BY Date DESC', [idRaffle]);
+  return await query('SELECT * FROM log2 where idraffle = ? ORDER BY Date DESC', [idRaffle]);
 }
 
 module.exports = Log;

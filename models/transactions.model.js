@@ -13,7 +13,7 @@ const Transactions = function(transactions) {
 
 Transactions.create = async (wallet, amount, event) => {
   let time = new Date();
-  await query('INSERT INTO Transactions2 SET wallet=?, amount=?, time=?, event=?', [wallet, amount, time, event]);
+  await query('INSERT INTO Transactions3 SET wallet=?, amount=?, time=?, event=?', [wallet, amount, time, event]);
 };
 
 
