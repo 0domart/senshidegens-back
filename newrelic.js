@@ -9,7 +9,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['<applicationName>'],
+  app_name: ['senshidegens'],
   /**
    * Your New Relic license key.
    */

@@ -38,7 +38,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to The Four Kingdoms API !" });
+  res.json({ message: "Welcome to The Senshi Degens API !" });
 });
 
 require("./routes/startup.js")(app);
